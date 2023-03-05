@@ -1,5 +1,65 @@
-
+<!DOCTYPE html>
 <html>
-  <head></head>
-  <body><p>abcdefg</body>
+<head>
+<title></title>
+</head>
+<body>
+<script type="text/javascript">
+const lucky =[
+{number:"1",
+planet:"sun",
+day:"sunday",
+colour:"yellow",
+gems:"coral",
+luckyNmbr:"1 10 19 28 37 46 55 64 73 82 91",
+strength:"indpendent, goal-orirnted, innovative,self-centered, freedom loving",
+weakness:"forcefull,doubtfull and risky",
+},
+{number:"2",
+planet:"sun",
+day:"sunday",
+colour:"blue and white",
+gems:"coral",
+luckyNmbr:"1 10 19 28 37 46 55 64 73 82 91",
+strength:"intuitive,unifying, influencial, sensitive and coperative",
+weakness:"indecisive, easily hurt, unassertive",
+},
+{number:"3",
+planet:"sun",
+day:"sunday",
+colour:"purple",
+gems:"coral",
+luckyNmbr:"1 10 19 28 37 46 55 64 73 82 91",
+strength:"indpendent, goal-orirnted, innovative,self-centered, freedom loving",
+weakness:"forcefull,doubtfull and risky",
+},
+{number:"4",
+planet:"sun",
+day:"sunday",
+colour:"purple",
+gems:"coral",
+luckyNmbr:"1 10 19 28 37 46 55 64 73 82 91",
+strength:"indpendent, goal-orirnted, innovative,self-centered, freedom loving",
+weakness:"forcefull,doubtfull and risky",
+}
+];
+//prompt date of birth
+const dateBd =prompt("enter Date of birth").replace(/[^0-9a-z]/gi, '');
+// function to add digits by adding itself
+function digitSum(num) {
+  let sum = 0;
+  while (num > 0) {
+    sum += num % 10;
+    num = Math.floor(num / 10);
+  }
+  return sum;
+}
+//calculate to reduce to 1dgt
+let singleDgt = digitSum(dateBd);
+while (singleDgt > 9) {
+  singleDgt = digitSum(singleDgt);
+}
+  alert(singleDgt);
+</script>
+</body>
 </html>
